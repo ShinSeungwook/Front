@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <script>
+            //scope : 함수 영역 확인
+
+            var a; //window 객체영역에 변수 선언
+            console.log(a, window.a);
+            // alert('경고');
+            // window.alert('경고');
+
+            var a = 1; //변수 덮어쓰기
+            
+            let aa; //window 영역에 객체 선언
+            console.log(aa);
+            // let aa = 1; aa는 위에서 선언되었기 때문에 덮어쓰기 안됨
+
+
+            for(var i = 0; i<5; i++){}
+            console.log(i, window.i);
+
+            for(let ii = 0; i<5; ii++){}
+            // console.log(ii, window.ii); Uncaught ReferenceError: ii is not defined
+
+            var f1 = function(){
+                var fv = 1;
+                console.log(fv); //fv는 지역변수. 메서드 벗어나면 사용 못함
+
+                c = 'hello' //var없이 변수 선언하면 window 영역에 변수선언 메서드 벗어나도 호출 가능
+
+                let fvv = 1;
+                console.log(fvv); //함수 영역 내에서 지역변수 당연히 사용 가능
+            }
+            f1();
+            b = true; //var없이 변수선언 : window 객체영역에 변수선언
+            console.log(b); //true
+            console.log(c); //hello
+            console.log(fv, fvv) //Uncaught ReferenceError: fv is not defined 
+                                //함수 밖에서 fv, fvv 변수 호출 안됨
+
+
+            //콜백함수 호출 (영역확인)
+            //this : 현재 사용중인 객체
+            var f2 = function(){
+                console.log(this)
+            }
+            f2();
+
+            var f3 = ()=>{
+                console.log(this)
+            }
+            f3();
+
+            var f4 = function(a){
+                a();
+            }
+            f4(f2); //window
+            f4(f3);
+
+            var f5 = function(a){
+                a();
+            }
+            f5(function(){console.log(this)});
+            f5(()=>{
+                console.log(this)
+            });
+        </script>
+    </head>
+</html>

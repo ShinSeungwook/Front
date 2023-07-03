@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //이름 있는 함수
+            function plus(a, b){ //함수선언
+                return a+b;
+            }
+
+            var c = plus(2, 3); //plus메서드 사용
+            console.log(c) //5
+
+            var c = plus('a', 'b');
+            console.log(c); //ab
+
+            var c = plus(2);
+            console.log(c); //NaN 매개변수가 부족함
+
+            var c = plus(2, 3, 5, 7)
+            console.log(c); //5 반환 앞에 두개의 매개변수 사용
+
+            
+            function greeting(lang){
+                if(typeof(lang) == 'undefined'){
+                    lang = 'kr';
+                }
+                if(lang == 'kr'){
+                    console.log('하이용')
+                }else if(lang == 'en'){
+                    console.log('Hi-Yo')
+                }
+            }
+            greeting('kr');
+            greeting('en');
+            greeting();
+            var d = greeting('kr');
+            console.log(d); //대입될 값이 없으므로 undefined
+
+            //-----------------------------------------------------------
+            //이름없는 함수
+
+            var f1 = function (){
+                console.log('이름없는 함수')
+            }
+            f1(); //이름없는함수 출력
+
+            var f2 = f1;
+            f2(); //이름없는함수 출력 
+            //f1과 f2는 서로 다른 함수이다.
+
+            var f3 = function(a){
+                console.log(a)
+            }
+            f3(2);
+            f3(true);
+            f3(f1);
+
+            var f4 = function(a){
+                a();
+            }
+            f4(f1);
+            f4( function(){console.log('콜백함수');
+        }); //함수에 인자를 사용하는 것을 콜백함수라고 함
+
+        var f5 = function(a,b,c){
+            console.log(a(b,c));
+        }
+
+        f5(plus, 2, 3);
+
+        f5(function(a, b){
+            return a-b;
+        },2, 3);
+
+        f5( (a, b)=> {
+            return a*b;
+        }, 2, 3)
+        </script>
+    </head>
+</html>
