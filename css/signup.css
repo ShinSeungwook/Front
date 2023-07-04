@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+form.signup>input[name="id"]{
+    background-color: antiquewhite;
+}
+form.signup>input[name="pwd"]{
+    background-color: antiquewhite;
+}
+form.signup>input[name="pwdck"]{
+    background-color: antiquewhite;
+}
+form.signup>input[name="name"]{
+    background-color: antiquewhite;
+}

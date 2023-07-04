@@ -1,0 +1,25 @@
+section{
+    background-color: lightcoral !important;
+}
+section>div.productlist{
+    overflow: auto;
+    width: 100%;
+}
+section>div.productlist> div.product{
+    display:inline-block;
+    width: 20%;
+    
+}
+section>div.productlist> div.product>ul{
+    width: 100px;
+    list-style: none;
+    padding-left : 10px;
+}
+section>div.productlist> div.product>ul>li{
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+}
+section>div.productlist> div.product>ul>li>img{
+    width: 200%;
+}
