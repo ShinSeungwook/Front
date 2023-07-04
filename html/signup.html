@@ -2,30 +2,25 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewprot" content="width=device-width, initial-scale=1.0">
-        <title>회원가입</title>
-        <link rel="stylesheet" href="../css/signup.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/signup.css"> 
+        <script src="../js/signup.js"></script>
     </head>
-
     <body>
-        
-            <form class="signup">
-                 <div><label for="id">아이디 : </label></div>
-                 <input name="id" id="id">
-                <span><button>아이디 중복확인</button></span>
-                <div>
-                <div><label for="pwd">비밀번호 : </label></div>
-                <input name="pwd" pwd="pwd"></div>
-                <div>
-                    <label for="pwdck"> 비밀번호 확인 : </label></div>
-                    <input name="pwdck" pwdck="pwdck"><div>
+        <form class="signup">
+            <label for="id">아이디</label>
+            <input type="text" name="id" id="i">
+            <span><button class="iddupchk">아이디 중복 확인</button></span>
+            <span><label for="pwd">비밀번호</label></span>
+            <input type="password" name="pwd" id="p"
+                pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}">
+            <span><label for="pwd1">비밀번호1</label></span>
+            <input type="password" id="p1">
+            <span><label for="name">이름</label></span>
+            <input type="text" name="name" id="n">
+            <span><button class="signup">가입</button></span>
+        </form>
 
-                    <div><label for="name"> 이름 :</label></div>
-                    <div><input name="name" name="name"></div>   
-                    
-                    <span><botton>가입</botton></span> 
-                
-                </div>
-            </form>
-        
-       
+    </body>
+</html>
+

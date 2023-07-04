@@ -1,41 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="../js/eventjs.js"></script>
-        
-    </head>    
-    <div>
-        <body>
-            <input id="result" type="text">
-            <br>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button><br>
-            <button>6</button>
-            <button>4</button>
-            <button>5</button><br>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button><br>
-            <button>0</button><br>
 
-            <button>+</button>
-            <button>-</button>
-            <button>=</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>이벤트학습</title>
+    <script src="../js/eventjs.js"></script>
+    <link rel="stylesheet" href="../css/eventjs.css">
+</head>
+
+<body>
+    <div>
+        <input id="result" type="text"><br>
+        <button id="btn7">7</button>
+        <button id="btn8">8</button>
+        <button id="btn9">9</button><br>
+        <button id="btn4">4</button>
+        <button id="btn5">5</button>
+        <button id="btn6">6</button><br>
+        <button id="btn1">1</button>
+        <button id="btn2">2</button>
+        <button id="btn3">3</button><br>
+        <button id="btn0">0</button><br>
+        <button id="btnPlus">+</button>
+        <button id="btnMinus">-</button>
+        <button id="btnEqual">=</button>
     </div>
 
     <div>
         <fieldset class="all">
-        <input type="checkbox"><span>ALL</span>
+            <input type="checkbox"><span>ALL</span>
         </fieldset>
-        
+
         <fieldset class="each">
-        <input type="checkbox"><span>ONE</span>
-        <input type="checkbox"><span>TWO</span>
-        <input type="checkbox"><span>THREE</span>
-        </fieldset>    
+            <input type="checkbox"><span>ONE</span>
+            <input type="checkbox"><span>TWO</span>
+            <input type="checkbox"><span>THREE</span>
+        </fieldset>
+    </div>
+
+    <div class="car">
+        <select class="type">
+            <option value="">선택하세요</option>
+            <option value="sedan">승용</option>
+            <option value="suv">SUV</option>
+            <option value="truck">트럭</option>
+        </select>
+        <select class="type2">
+            <!-- <option>선택하세요</option>
+            <option>쏘나타</option>
+            <option>더 뉴 아반테</option>
+            <option>디 올 뉴 그랜저</option>
+            <option>디 올 뉴 그랜저Hybrid</option> -->
+        </select>
+    </div>
+
+    <div class="keyboard">
+        <input type="text" placeholder="입력한 문자를 대문자로 바꾸기">
+    </div>
+
+    <div class="form">
+        <!-- 현재는 백엔드 서버가 없기 때문에 404오류가 뜰 것으로 예상 -->
+        <form action="http://localhost:8888/form"> 
+            <input type="text" name="t" value="t1">
+            <input type="password" name="p" value="p1">
+            <button>전송</button> <!-- input type="submit" -->
+        </form>
+
+    </div>
+    <div class="link">
+        <!-- a태그 객체에는 click 이벤트 처리가 내장되어 있음 : default event handler-->
+        <a href="http://www.google.com">구글</a>
     </div>
 
 </body>
-    
+
 </html>
