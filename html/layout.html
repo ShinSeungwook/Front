@@ -6,6 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃</title>
     <link rel="stylesheet" href="../css/layout.css">
+    <script src="../js/layoutjs.js"></script>
+
+    <!-- <script>
+        //ajax 요청하기
+        window.addEventListener('load',()=>{
+            const btObj = document.querySelector('header>nav>ul>li.login>a');
+            const bt2Obj = document.querySelector('header>nav>ul>li.signup>a');
+            const pObj = document.querySelector('section'); //바꿀내용
+            const p2Obj = document.querySelector('section'); //바꿀내용
+
+            //로그인 클릭 되었을 때 할 일 START
+            btObj.addEventListener('click',(e)=>{
+                e.preventDefault(); //새로고침 방지
+
+                //XMLHttpRequest object 생성
+                const xhttp = new XMLHttpRequest();
+
+                //콜백함수 정의
+                xhttp.onload = (e)=>{
+                    pObj.innerHTML = e.target.responseText;
+                };
+
+                //요청보내기
+                xhttp.open("GET", "login.html");
+                xhttp.send();
+            });
+            //가입 클릭 되었을 때 할 일 START
+            bt2Obj.addEventListener('click',(e)=>{
+                e.preventDefault(); //새로고침 방지
+
+                //XMLHttpRequest object 생성
+                const xhttp = new XMLHttpRequest();
+
+                //콜백함수 정의
+                xhttp.onload = (e)=>{
+                    p2Obj.innerHTML = e.target.responseText;
+                };
+
+                //요청보내기
+                xhttp.open("GET", "signup.html");
+                xhttp.send();
+            });
+            //로그인 클릭 되었을 때 할 일 END    
+        });
+    </script> -->
 </head>
 
 <body>
@@ -14,9 +59,10 @@
         </h1>
         <nav> <!--메뉴들이 들어가는 자리-->
             <ul>
-                <li><a href="./login.html">로그인</a></li>
+                
+                <li class="login"><a href="./login.html">로그인</a></li>
                 <li><a href="#">로그아웃</a></li>
-                <li><a href="./signup.html">가입</a></li>
+                <li class="signup"><a href="/signup.html">가입</a></li>
 
                 <li><a href="./productlist.html">상품목록</a></li>
                 <li><a>장바구니목록</a></li>
@@ -27,6 +73,7 @@
 
     <section><!-- 홈페이지 내용, aside : 홈페이지 배너-->
         <div>
+            
             <article id="article1">드라이브스루 매장</article> <!--신문에서 하나하나 기사가 나눠있는 섹션이 나누어져있는 것-->
             <article id="article2">리저브 매장</article>
         </div>

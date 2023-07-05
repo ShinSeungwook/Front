@@ -1,15 +1,27 @@
 *{
     box-sizing: border-box;
 }
-form.signup>input[name="id"]{
-    background-color: antiquewhite;
+form.signup{
+    overflow:auto;
+    width: 50%;
 }
-form.signup>input[name="pwd"]{
-    background-color: antiquewhite;
+
+form.signup>label{
+    float: left;
 }
-form.signup>input[name="pwdck"]{
-    background-color: antiquewhite;
+
+form.signup>input,form.signup>button{
+    display: inline-block;
+    width: 100%;
 }
-form.signup>input[name="name"]{
-    background-color: antiquewhite;
+button.iddupchk{
+    background-color: lightcoral;
+    width: 50%;
+    border: 1px solid;
+}
+form.signup>button.signup{
+    background-color: green;
+    width : 50%;
+    border: 1px solid;
+    display : none;
 }

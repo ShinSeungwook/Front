@@ -144,9 +144,21 @@ window.addEventListener('load', function() { //window에서 load 이벤트가 �
                 //     console.log("지우기",value)
                 // })
 
-                for(let i=0; i<options.length; i++){
-                    carType2Obj.removeChild(options[i])
-                }
+
+                //1 : Element node, 2: Attrivute, 3: Text node
+                options.forEach((option)=>{
+                    console.log(option, option.nodeType)
+                    if(option.nodeType == 1){
+                        carType2Obj.removeChild(option)
+                    }
+                })
+
+                // for(let i=0; i<options.length; i++){
+                //     carType2Obj.removeChild(options[i])
+                // }
+
+
+
 
                 type3.forEach((value)=>{//type2의 값(value)을 0번인덱스부터 꺼내온다
                     let optionObj = document.createElement('option') //<option> 생성
