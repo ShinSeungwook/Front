@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+div.product_view>div.product_view_pic{
+    width: 50%;
+    float:left;
+}
+div.product_view>div.product_view_detail{
+    width: 50%;
+    float:right;
+}

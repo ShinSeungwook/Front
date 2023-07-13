@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="../css/productlist.css">
     <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/productlist.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../js/layoutjq.js"></script>
+    <script src="../js/productlistjq.js"></script>
     
 
  
@@ -13,16 +16,15 @@
 
 <body>
     <header><!--메뉴나열-->
-        <h1><a class="logo" href="#">스타벅스코리아</a>
+        <h1><a class="logo" href="./layout.html">스타벅스코리아</a>
         </h1>
-
         <nav> <!--메뉴들이 들어가는 자리-->
             <ul>
-                <li><a href="./login.html">로그인</a></li>
+                <li class="login"><a href="#">로그인</a></li>
                 <li><a href="#">로그아웃</a></li>
-                <li><a>가입</a></li>
+                <li class="signup"><a href="#">가입</a></li>
 
-                <li><a href="./productlist.html">상품목록</a></li>
+                <li class="productlist"><a href="#">상품목록</a></li>
                 <li><a>장바구니목록</a></li>
                 <li><a>주문목록</a></li>
             </ul>
@@ -35,27 +37,12 @@
     <div class="product">
         <ul>
             <li>
-                <img src="../images/C0001.jpg" alt="한약">
-                <span>한약</span>
+                <img src="" alt="원본">
+                <span>원본</span>
             </li>
         </ul>
     </div>
-    <div class="product">
-        <ul>
-            <li>
-                <img src="../images/C0002.jpg" alt="노맛">
-                <span>노맛</span>
-            </li>
-        </ul>
-    </div>
-    <div class="product">
-        <ul>
-            <li>
-                <img src="../images/C0004.jpg" alt="존맛">
-                <span>존맛</span>
-            </li>
-        </ul>
-    </div>
+    
 </div>
 </section>
 <footer> <!--홈페이지 하단 상세정보들-->
